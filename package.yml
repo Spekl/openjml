@@ -1,7 +1,7 @@
-name       : openjml          # name of the package
-version    : 1.7.20150406-1       # version of the package
-kind       : tool                     # one of tool or spec(s)
-description: OpenJML is a tool set for JML, built on the OpenJDK framework for Java.
+name       : openjml            # name of the package
+version    : 1.7.3.20150406-1   # version of the package
+kind       : tool               # one of tool or spec(s)
+description: OpenJML is a tool set for JML, built on the OpenJDK framework for Java. 
 
 author:
   - name: John L. Singleton
@@ -11,29 +11,16 @@ author:
 
 # a list of the named and versioned packages that must be installed before
 # installing 
-# depends:                               
-#   - package   : other-package   # represents a package that MUST be installed
-#     version   : 1.1.1
-#     platform  : all 
-#   - package   : other-package
-#     version   : 1.1.1
-#   - one-of:                     # at least one of these must be installed  
-#       - package: z3
-#         version: 1.1.2
-#         platform: all
-#       - package: why3
-#         version: 1.1.2
-#         platform: all
 
 #
 # assets that make up THIS package
 #
 
-# assets:
-#     - asset   : MAIN
-#       name    : my-asset
-#       url     : http://www.openjml.org/downloads/1.1.2.tar.gz  
-#       platform: all
+assets:
+    - asset   : MAIN
+      name    : openjml-dist
+      url     : http://jmlspecs.sourceforge.net/openjml.tar.gz
+      platform: all
         
 # assumes:
 #   - cmd: java --version # right now just support cmd -- maybe file exists?
@@ -42,10 +29,7 @@ author:
 
 
 # downloads everything to the .
-# install:
-#   - cmd: tar zxvf MAIN
-#     description: What this command does
-#     platform: all
-#   - cmd: tar zxvf $MAIN
-#     description: What this command does...
-#     platform: windows
+install:
+  - cmd: tar -zxvf MAIN
+    description: Unpacking the archive...
+    platform: all
