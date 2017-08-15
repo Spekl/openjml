@@ -1,5 +1,5 @@
 name       : openjml            # name of the package
-version    : 1.7.3.20150406-1   # version of the package
+version    : 1.8.19.20170726    # version of the package
 kind       : tool               # one of tool or spec(s)
 description: OpenJML is a tool set for JML, built on the OpenJDK framework for Java. 
 
@@ -15,12 +15,13 @@ author:
 #
 # assets that make up THIS package
 #
-
 assets:
     - asset   : MAIN
       name    : openjml-dist
-      url     : http://jmlspecs.sourceforge.net/openjml.tar.gz
+      url     : https://github.com/OpenJML/OpenJML/releases/download/0.8.19/openjml-0.8.18-20170726.tar.gz
+
       platform: all
+        
         
 # assumes:
 #   - cmd: java --version # right now just support cmd -- maybe file exists?
